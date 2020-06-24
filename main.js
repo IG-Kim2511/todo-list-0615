@@ -29,8 +29,10 @@ function addTodo(event) {
 
   //   Create li
   // Node.appendChild() 새로운 단락 요소를 생성하고 문서에 있는 바디 요소의 끝에 붙입니다.
+  // T:todoInput.value; : todoInput에 넣은 글자가 사용됨
+
   const newTodo = document.createElement("li");
-  newTodo.innerText = "li innerText";
+  newTodo.innerText = todoInput.value;
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
 
@@ -49,4 +51,7 @@ function addTodo(event) {
 
   //   Append to list
   todoList.appendChild(todoDiv);
+
+  //clear todo input value
+  todoInput.value = "";
 }
