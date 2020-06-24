@@ -14,8 +14,9 @@ const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 
-// event listeners
+// Event listeners
 todoButton.addEventListener("click", addTodo);
+todoList.addEventListener("click", deleteCheck);
 
 //functions
 // JS2
@@ -54,4 +55,24 @@ function addTodo(event) {
 
   //clear todo input value
   todoInput.value = "";
+}
+
+// JS 4.휴지통 클릭하면 목록 지워짐
+//T: e.target
+// const todoList = document.querySelector(".todo-list");
+// todoList.addEventListener('click',deleteCheck);
+// function deleteCheck(e){
+//   console.log(e.target); }
+
+function deleteCheck(e) {
+  // e.target체크
+  //  console.log(e.target);
+  // e.target 가져오기
+  const item = e.target;
+
+  // Delete Todo
+  if (item.classList[0] === "trash-btn") {
+    const todo = item.parentElement;
+    todo.remove();
+  }
 }

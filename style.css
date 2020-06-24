@@ -81,8 +81,14 @@ form button:hover {
 }
 .complete-btn {
   background: green;
-
 }
-.todo-item{
+.todo-item {
   padding: 0rem 0.5rem;
+}
+
+/* JS.4 */
+/* image클릭하면 클릭이 안먹혀서... none, 버튼클릭으로 수렴함 */
+.fa-trash,
+.fa-check {
+  pointer-events: none;
 }
