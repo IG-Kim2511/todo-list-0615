@@ -82,9 +82,8 @@ function deleteCheck(e) {
     // JS 8. animation
     // 밑으로 떨어지는 효과 후, 지워짐
     // https://developer.mozilla.org/ko/docs/Web/Events
-    // transitionend	CSS 전이가 완료되었을 때.
+    // T: transitionend	CSS 전이가 완료되었을 때.
 
-    
     todo.classList.add("fall");
     todo.addEventListener("transitionend", function () {
       todo.remove();
