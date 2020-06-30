@@ -19,7 +19,7 @@ todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 
 //functions
-// JS2
+// JS 2
 function addTodo(event) {
   // prevent form from submitting
   event.preventDefault();
